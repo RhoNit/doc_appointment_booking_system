@@ -5,7 +5,8 @@ diesel::table! {
         id -> Int4,
         patient_id -> Nullable<Int4>,
         doctor_id -> Nullable<Int4>,
-        appointment_status -> Varchar,
+        time_slot -> Varchar,
+        status -> Varchar,
     }
 }
 
