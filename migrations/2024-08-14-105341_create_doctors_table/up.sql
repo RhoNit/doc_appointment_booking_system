@@ -1,5 +1,5 @@
 CREATE TABLE doctors(
-    id UUID PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     doctor_name VARCHAR NOT NULL,
     registration_number VARCHAR NOT NULL,
     speciality VARCHAR NOT NULL,

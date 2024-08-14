@@ -1,6 +1,6 @@
 CREATE TABLE appointments(
-    id UUID PRIMARY KEY,
-    doctor_id UUID REFERENCES doctors(id),
-    patient_id UUID REFERENCES patients(id),
+    id SERIAL PRIMARY KEY,
+    patient_id INTEGER REFERENCES patients(id),
+    doctor_id INTEGER REFERENCES doctors(id),
     appointment_status VARCHAR NOT NULL
 );
