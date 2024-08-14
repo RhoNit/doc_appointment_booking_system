@@ -2,16 +2,16 @@
 
 diesel::table! {
     appointments (id) {
-        id -> Uuid,
-        doctor_id -> Nullable<Uuid>,
-        patient_id -> Nullable<Uuid>,
+        id -> Int4,
+        patient_id -> Nullable<Int4>,
+        doctor_id -> Nullable<Int4>,
         appointment_status -> Varchar,
     }
 }
 
 diesel::table! {
     doctors (id) {
-        id -> Uuid,
+        id -> Int4,
         doctor_name -> Varchar,
         registration_number -> Varchar,
         speciality -> Varchar,
@@ -24,7 +24,7 @@ diesel::table! {
 
 diesel::table! {
     patients (id) {
-        id -> Uuid,
+        id -> Int4,
         patient_name -> Varchar,
         age -> Int4,
         phone -> Varchar,
